@@ -4,25 +4,68 @@
              x:Class="MoncayoJorgeIs_ExamenPro2.Views.InformacionPage"
              Title="InformacionPage">
     <VerticalStackLayout>
-
         <Label 
             Text="Ingrese la longitud a convertir: "
             TextColor="White"
             VerticalOptions="Start" 
             HorizontalOptions="Start" />
         <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
-            <Entry Text="{Binding InformacionJorge.DatoAConvertirInformacion }" TextColor="Gray" x:Name="entrynombre" />
+            <Entry Text="{Binding InformacionJorge.DatoAConvertirInformacion }" TextColor="Gray" x:Name="entrydato" />
         </Frame>
-        
 
         <Label
-            Text="Escoja a que medida de informacion quiere convertir"
-            />
+            Text="Escoja la medida de longitud que usted posee"
+            TextColor="White"
+            VerticalOptions="Start" 
+            HorizontalOptions="Start" />
+        <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
+            <Picker x:Name="pickermedidatengoinfo"
+        Title="Selecciona la medida">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>bits</x:String>
+                        <x:String>bye</x:String>
+                        <x:String>kilobit</x:String>
+                        <x:String>kilobyte</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+        </Frame>
+
 
         <Label 
+            Text="Escoja la medida a la que desea transformar"
+            TextColor="White"
+            VerticalOptions="Start" 
+            HorizontalOptions="Start" />
+        <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
+            <Picker x:Name="pickermedidatransformarinfo"
+        Title="Selecciona la medida">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>bits</x:String>
+                        <x:String>byte</x:String>
+                        <x:String>kilobit</x:String>
+                        <x:String>kilobyte</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+        </Frame>
+
+        <Button x:Name="Regresar" BackgroundColor="White" TextColor="Black" Text="Convertir" HorizontalOptions="Center" />
+
+
+
+
+        <Label
+            Text="Su longitud convertida es:"
+            TextColor="White"
+            VerticalOptions="Start" 
+            HorizontalOptions="Start"
             
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            />
+
     </VerticalStackLayout>
 </ContentPage>

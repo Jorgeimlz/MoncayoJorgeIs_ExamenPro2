@@ -15,6 +15,13 @@
             ContentTemplate="{DataTemplate views:LongitudPage}"
             Route="LongitudPage"/>
 
+        <ShellContent
+            Title="Informacion"
+            ContentTemplate="{DataTemplate views:InformacionPage}"
+            Route="InformacionPage"/>
+
+
+
     </TabBar>
 
 </Shell>
